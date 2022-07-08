@@ -18,7 +18,6 @@ const generatePasswords = () => {
   inputNumber = input === '' ? 15 : input
   if (inputNumber >= 0 && inputNumber <= 15){
     if (numbersToggle.value === 'off' && symbolsToggle.value === 'off') {
-      console.log(1)
       for (let i = 0; i < inputNumber; i++) {
         password1 += charactersOnlyLetters[Math.floor(Math.random() * charactersOnlyLetters.length)]
       }
@@ -29,7 +28,6 @@ const generatePasswords = () => {
       showPass2.hidden = false
       messageEl.hidden = false
     } else if (symbolsToggle.value === 'off') {
-      console.log(1)
       for (let i = 0; i < inputNumber; i++) {
         password1 += charactersWithoutSymbols[Math.floor(Math.random() * charactersWithoutSymbols.length)]
       }
@@ -40,7 +38,6 @@ const generatePasswords = () => {
       showPass2.hidden = false
       messageEl.hidden = false
     } else if (numbersToggle.value === 'off') {
-    console.log(1)
     for (let i = 0; i < inputNumber; i++) {
       password1 += charactersWithoutNumbers[Math.floor(Math.random() * charactersWithoutNumbers.length)]
     }
