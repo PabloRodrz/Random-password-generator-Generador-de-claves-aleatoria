@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password generator</title>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<link rel="stylesheet" href="index.css">
+
+<body>
+  <div class="container">
+    <h1>Generate a <br> <span class="randompass">random password</span> </h1>
+    <p>Never use an insecure password again</p>
+    <button id="password-btn" onclick="generatePasswords()">Generate passwords</button>
+    <label>Set your password length (Optional! 15 maximum)</label>
+    <input type="text" id="pass-length">
+    <label class="switch">
+      <label class="toggles-label">Numbers On/Off</label>
+      <input checked type="checkbox" id="numbers-toggle" onclick="handleNumbersOnOff()">
+      <span class="slider round"></span>
+    </label>
+    <label class="switch2">
+      <label class="toggles-label">Symbols On/Off</label>
+      <input checked type="checkbox" id="symbols-toggle" onclick="handleSymbolsOnOff()">
+      <span class="slider round"></span>
+    </label>
+    <div class="line"></div>
+    <p hidden id="message-el">You can copy you password by clicking on it</p>
+    <a href="#" onclick="return false" hidden id="password1"></a>
+    <a href="#" onclick="return false" hidden id="password2"></a>
+  </div>
+</body>
+<script src="index.js"></script>
+
+</html>
