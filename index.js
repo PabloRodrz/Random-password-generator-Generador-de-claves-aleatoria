@@ -64,8 +64,9 @@ const generatePasswords = () => {
 }
    else {
     swal('Oh, no :(', 'You need to write a value between 1 and 15', 'error')
-    showPass1.hidden = false
-    showPass2.hidden = false
+    showPass1.hidden = true
+    showPass2.hidden = true 
+    messageEl.hidden = true
   }
   showPass1.textContent = password1
   showPass2.textContent = password2
